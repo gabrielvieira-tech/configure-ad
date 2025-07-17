@@ -205,6 +205,7 @@ Back on DC-1, log in as jane_admin, then:
 Open PowerShell ISE as Administrator
 
 Paste in a script that creates users — here’s a quick example:
+<a href<https:"//raw.githubusercontent.com/joshmadakor1/AD_PS/refs/heads/master/Generate-Names-Create-Users.ps1"/a>Script<
 
 
 </p>
