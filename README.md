@@ -205,7 +205,17 @@ Back on DC-1, log in as jane_admin, then:
 Open PowerShell ISE as Administrator
 
 Paste in a script that creates users — here’s a quick example:
-<a href<https:"//raw.githubusercontent.com/joshmadakor1/AD_PS/refs/heads/master/Generate-Names-Create-Users.ps1"/a>Script<
+ <a href="https://raw.githubusercontent.com/joshmadakor1/AD_PS/refs/heads/master/Generate-Names-Create-Users.ps1">Script!<a>
+Run the script and check ADUC under _EMPLOYEES to confirm the accounts were created
+
+To test, try logging into Client-1 with one of the new user accounts:
+
+Username: mydomain.com\user you picked
+
+Password: Password1
+
+You should be able to remote access it, assuming RDP access for Domain Users was enabled earlier.
+
 
 
 </p>
