@@ -94,3 +94,118 @@ Double-check that the firewall on DC-1 is off.
 Make sure both VMs are on the same subnet and VNet.
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<h2>Install Active Directory on DC-1</h2>
+Start by logging into DC-1, your Windows Server. Open Server Manager, and install the Active Directory Domain Services (AD DS) role.(only)
+
+Once installed, promote the machine to a Domain Controller:
+
+Choose "Add a new forest"
+
+Use a domain name like mydomain.com (or whatever you want, just remember it)
+
+Accept the defaults unless you know what you’re changing
+
+Let the system reboot once setup is complete
+
+After rebooting, log in using your domain account:
+
+mydomain.com\xxxxxxxxx (x=user name), If you can’t log in after reboot, check your credentials and that the domain name is typed correctly.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<h2>Create a Domain Admin User</h2>
+With the domain running, now it’s time to create a proper admin account.
+
+Open Active Directory Users and Computers (ADUC) and do the following:
+
+Create two new Organizational Units (OUs) by Right-click the mydomain.com > new > Organizational Unit:
+
+_EMPLOYEES
+
+_ADMINS
+
+In _ADMINS, create a new user by Right-click the _ADMINS > new > user :
+
+Name: Jane Doe
+
+Username: jane_admin
+
+Password: Cyberlab123! (or whatever you prefer)
+
+Right-click the user, go to Properties > Member Of, and add her to:
+
+Domain Admins (this gives full administrative access)
+
+Once done, log off and log back into DC-1 using the new domain admin account:
+
+mydomain.com\jane_admin
+You’ll use this account for all admin tasks from now on.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<h2>Join Client-1 to the Domain</h2>
+
+Now log into Client-1 using its local account (labuser) and join it to the domain:
+
+Go to System > Rename this PC (Advanced)
+
+Click "Change" and set the domain to mydomain.com
+
+Provide domain info (e.g., jane_admin with your domain password)
+
+Restart the machine when prompted
+
+Back on DC-1, open ADUC and check that Client-1 shows up in Computers. Create a new OU (Organizational Unit) called _CLIENTS and move Client-1 into it for better organization.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<h2>Enable Remote Desktop for Domain Users</h2>
+To allow non-admin users to remote into Client-1, log into Client-1 as jane_admin.
+
+Open System Properties > Remote Desktop
+
+Enable Remote Desktop
+
+Click Select Users, then add:
+
+Domain Users
+
+This allows any domain user (not just admins) to connect via RDP.
+
+ In real life, you would do this using Group Policy, but manual config is fine for a lab.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<h2>Bulk-Create Users with PowerShell and Test Login</h2>
+Now let’s create a bunch of test users automatically.
+
+Back on DC-1, log in as jane_admin, then:
+
+Open PowerShell ISE as Administrator
+
+Paste in a script that creates users — here’s a quick example:
+
+
+</p>
+<br />
