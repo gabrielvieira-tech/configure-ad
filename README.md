@@ -8,7 +8,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Video Demonstration</h2>
 
-- ### [YouTube:Deploy on-premises AD within Azure VMs (not ready yet :'()](https://www.youtube.com)
+- ### [YouTube:Deploy on-premises AD within Azure VMs ---not ready yet :'(](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
