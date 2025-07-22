@@ -40,11 +40,11 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <p>
 
 <h2>Setting Up the Domain Controller (DC-1)</h2>  
-First things first — head over to the Azure Portal and create a new Resource Group. This will be the home base for all your lab resources.
+First things first...Head over to the Azure Portal and create a new Resource Group. This will be the home base for all your lab resources.
 
 Next up, create a Virtual Network (VNet). This sets the stage for your virtual machines to talk to each other.
 
-Now, spin up a new Windows Server 2022 VM and name it DC-1. Make sure it’s in the same region as your VNet. Pick a username and password you won’t forget — and maybe wright them down somewhere safe.
+Now, spin up a new Windows Server 2022 VM and name it DC-1. Make sure it’s in the same region as your VNet. Pick a username and password you won’t forget, and maybe wright them down somewhere safe.
 
 Once DC-1 is deployed:
 
