@@ -54,7 +54,7 @@ Under IP configurations, change the private IP to Static so it doesn't change af
 
 Connect to DC-1 using Remote Desktop.
 
-Inside the VM, open Windows Firewall settings and temporarily disable the firewall — this makes it easier to test network connections later. (Don’t forget to turn it back on once you’re done testing.)
+Inside the VM, open Windows Firewall settings and temporarily disable the firewall...This makes it easier to test network connections later. (Don’t forget to turn it back on once you’re done testing.)
 
 </p>
 <br />
