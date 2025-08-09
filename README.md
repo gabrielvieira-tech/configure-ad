@@ -35,8 +35,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+<img width="1667" height="847" alt="1 done" src="https://github.com/user-attachments/assets/9ef980b0-29e8-4697-9c8f-41fd55d57ffc" />
+
 <p>
 
 <h2>Setting Up the Domain Controller (DC-1)</h2>  
@@ -60,7 +60,8 @@ Inside the VM, open Windows Firewall settings and temporarily disable the firewa
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1099" height="903" alt="2 1" src="https://github.com/user-attachments/assets/5e43c737-3415-46fe-9ba7-60b41570fde3" />
+
 </p>
 <p>
 <h2>Setting Up the Client Machine (Client-1)</h2> 
