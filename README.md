@@ -30,7 +30,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Install Active Directory on DC-1 (Step 4)
 - Create a Domain Admin User (Step 5)
 - Join Client-1 to the Domain (Step 6)
-- Bulk-Create Users with PowerShell and Test Login (Step 7)
+- Enable Remote Desktop for Domain Users (Step 7)
+- Bulk-Create Users with PowerShell and Test Login (Step 8)
 
 <h2>Deployment and Configuration Steps</h2>
 
